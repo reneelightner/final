@@ -1,0 +1,27 @@
+.card-title {
+  font-weight: 600;
+}
+
+.winning-artist {
+  display: inline-block; 
+  padding-right: 5px;
+}
+
+.winning-artist span {
+  height: 10px;
+  width: 10px;
+  background-color: #666;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.navbar a {
+  color: rgba(255,255,255,.8);
+  margin-left: 15px;
+}
+
+.navbar a:hover {
+  color: white;
+  text-decoration: none;
+}
+
