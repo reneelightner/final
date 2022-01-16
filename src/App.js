@@ -127,7 +127,7 @@ export default function App(props) {
   const getArtistSummary = (artist) => {
     artist = artist.replace(/’/g, '%27');
     artist = artist.replace(/&/g, '%26');
-    const url = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist}&api_key=a36b582801c6e46141b9896f2b65b1c4&format=json`;
+    const url = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist}&api_key=a36b582801c6e46141b9896f2b65b1c4&format=json`;
     fetch(url)
       .then((response) => {
         return response.json();
