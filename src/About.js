@@ -14,7 +14,7 @@ export default function About () {
                 </ul>
                 <p>Source:</p>
                 <ul>
-                    <li><a href='https://www.grammy.com/grammys/awards'>Grammy Awards Nomimations & Winners</a></li>
+                    <li><a target="new" href='https://www.grammy.com/grammys/awards'>Grammy Awards Nomimations & Winners</a></li>
                 </ul>
                 <h2 class="mt-5">MTV Video Music Awards</h2>
                 <p>Notes:</p>
@@ -24,21 +24,21 @@ export default function About () {
                 </ul>
                 <p>Sources:</p>
                 <ul>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Video_of_the_Year'>Wikipedia: Video of the Year</a></li>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Artist_of_the_Year'>Wikipedia: Artist of the Year</a></li>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Male_Video'>Wikipedia: Best Male Video</a></li>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Female_Video'>Wikipedia: Best Female Video</a></li>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_New_Artist'>Wikipedia: Best New Artist</a></li>
-                    <li><a href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Group'>Wikipedia: Best Group</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Video_of_the_Year'>Wikipedia: Video of the Year</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Artist_of_the_Year'>Wikipedia: Artist of the Year</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Male_Video'>Wikipedia: Best Male Video</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Female_Video'>Wikipedia: Best Female Video</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_New_Artist'>Wikipedia: Best New Artist</a></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/MTV_Video_Music_Award_for_Best_Group'>Wikipedia: Best Group</a></li>
                 </ul>
                 <h2 class="mt-5">Billboard Music Awards</h2>
                 <p>Notes:</p>
                 <ul>
-                    <li></li>
+                    <li>The Billboard Music Awards were not held at all from 2007 to 2010.</li>
                 </ul>
                 <p>Source:</p>
                 <ul>
-                    <li><a href='https://www.billboardmusicawards.com/winners-database/'>Billboard Music Awards: Winners Database</a></li>
+                    <li><a target="new"  href='https://www.billboardmusicawards.com/winners-database/'>Billboard Music Awards: Winners Database</a></li>
                 </ul>
                 <h2 class="mt-5">American Music Awards</h2>
                 <p>Notes:</p>
@@ -48,17 +48,16 @@ export default function About () {
                 </ul>
                 <p>Source:</p>
                 <ul>
-                    <li><a href='https://www.theamas.com/winners-database/'>American Music Awards: Winners Database</a></li>
+                    <li><a target="new"  href='https://www.theamas.com/winners-database/'>American Music Awards: Winners Database</a></li>
                 </ul>
                 <h2 class="mt-5">Super Bowl Halftime Show Headliner</h2>
                 <p>Notes:</p>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>All of the Super Bowl halftime shows had performers, but we're only including what's considered a 'headline performer'.</li>
                 </ul>
                 <p>Source:</p>
                 <ul>
-                    <li></li>
+                    <li><a target="new"  href='https://en.wikipedia.org/wiki/List_of_Super_Bowl_halftime_shows'>Wikipedia: List of Super Bowl halftime shows (History section)</a></li>
                 </ul>
             </div>
         </div>

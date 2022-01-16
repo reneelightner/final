@@ -1,13 +1,20 @@
 import './App.css';
+
 import Chart from './Chart.js';
-import Artists from './Artists.js';
+import ArtistsDropdown from './ArtistsDropdown.js';
 import Favs from './Favs.js';
+import ArtistCardFooter from './ArtistCardFooter';
+import ReadMoreBtn from './ReadMoreBtn';
+import FavBtn from './FavBtn';
+
+import fixArtistSummary from './fixArtistSummary.js';
+
+// data
 import grammysJSON from './data/dataGrammys.json';
 import mtvJSON from './data/dataMTV.json';
 import billboardJSON from './data/dataBillboard.json';
 import amaJSON from './data/dataAMA.json';
 import superbowlJSON from './data/dataSuperBowl.json';
-import fixArtistSummary from './fixArtistSummary.js';
 
 // award names for each award show
 const grammysAwards = [...new Set(grammysJSON.map(item => item['AWARD']))];
@@ -53,6 +60,7 @@ artistArray = artistArray.sort();
 // make array of objects - each obj is an artist (used for drop down options)
 const artistOptions = artistArray.map((artist) => { return {text: artist, value: artist} });
 
+// used in handleArtistSelection
 function getArtistCount(data, artist) {
   let count = 0;
   for (let k of data) {
@@ -69,6 +77,7 @@ function getArtistCount(data, artist) {
 // multiple artist with this name on last fm so we need to fix summary
 const artistsFixSummary = ['Chris Brown', 'Creed', 'Eve', 'John Mayer', 'Next', 'Nirvana', 'Roger Miller', 'The Cars', 'Zayn'];
 
+//App component
 export default function App(props) {
 
   const handleArtistSelection = (artist) => {
@@ -115,8 +124,7 @@ export default function App(props) {
     props.setartistAwardsTotal(currArtistAwards);
   }
 
-
-  function getArtistSummary(artist) {
+  const getArtistSummary = (artist) => {
     artist = artist.replace(/’/g, '%27');
     artist = artist.replace(/&/g, '%26');
     const url = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist}&api_key=${process.env.REACT_APP_LASTFM_API_KEY}&format=json`;
@@ -222,27 +230,13 @@ export default function App(props) {
     }
   });
 
-  const FavBtn = () => (
-    <button className='btn btn-light' onClick={() => {handleFavArtist(true, props.artist)}}>❤️</button>
-  );
-
-  const ReadMoreBtn = () => (
-    <a className='btn btn-primary' href={props.artistURL} target='new'>Read More</a>
-  );
-
-  const ArtistCardFooter = () => (
-    <div class="card-footer text-muted">
-      <small>Source: <a href='https://www.last.fm/api/intro' target='new'>Last.fm API</a></small>
-    </div>
-  );
-
   return (
     <div className="container">
       <div class="row mt-3">
         <div class="col-sm-6">
           <h1>Music Award Show Winners</h1>
-          <p>Learn more about famous music artists by seeing their awards! Choose an artist below to see their awards from the: Grammys, MTV Music Awards, Billboard Music Awards, American Music Awards and if they've headlined the Superbowl Halftime Show (not an award show but I'm considering it an honor). <i>Note: only select awards are shown.</i></p>
-          <Artists options={artistOptions} onArtistChange={handleArtistSelection} placeholder={'Pick an Artist'} value={props.value}/>
+          <p>Learn more about famous music artists by seeing their awards! Choose an artist below to see their awards from the: Grammys, MTV Music Awards, Billboard Music Awards, American Music Awards and if they've headlined the Superbowl Halftime Show (not an award show but I'm considering it an honor). <i>Note: only select awards are shown for each show.</i></p>
+          <ArtistsDropdown options={artistOptions} onArtistChange={handleArtistSelection} placeholder={'Pick an Artist'} value={props.value}/>
         </div>
       </div>
       <div class="row mt-5">
@@ -254,8 +248,8 @@ export default function App(props) {
             <div class="card-body">
               <h5 class="card-title">{artistSummaryText()}</h5>
               <p class="card-text">{props.artistSummary}</p>
-              { props.pickedArtist ? <ReadMoreBtn /> : null }
-              { props.pickedArtist ? <FavBtn /> : null }
+              { props.pickedArtist ? <ReadMoreBtn artistURL={props.artistURL} /> : null }
+              { props.pickedArtist ? <FavBtn handleFavArtist={handleFavArtist} artist={props.artist} /> : null }
             </div>
             { props.pickedArtist ? <ArtistCardFooter /> : null }
           </div>
